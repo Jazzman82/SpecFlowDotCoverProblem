@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="..\packages\NUnit.3.13.3\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" />
     <Import Project="..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.props" Condition="Exists('..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.props')" />
     <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.props')" />
+    <Import Project="..\packages\NUnit.3.13.3\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" />
     <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -114,16 +114,16 @@
       <PropertyGroup>
         <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
       </PropertyGroup>
-      <Error Condition="!Exists('..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets'))" />
+      <Error Condition="!Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.3\build\NUnit.props'))" />
       <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.props'))" />
       <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.targets'))" />
       <Error Condition="!Exists('..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.props'))" />
       <Error Condition="!Exists('..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.targets'))" />
-      <Error Condition="!Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.3\build\NUnit.props'))" />
+      <Error Condition="!Exists('..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets'))" />
     </Target>
-    <Import Project="..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets')" />
     <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.4.0.16-beta\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
     <Import Project="..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.targets" Condition="Exists('..\packages\SpecFlow.NUnit.4.0.16-beta\build\SpecFlow.NUnit.targets')" />
+    <Import Project="..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.4.0.16-beta\build\SpecFlow.targets')" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
